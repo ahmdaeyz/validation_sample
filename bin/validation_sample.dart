@@ -1,15 +1,16 @@
+
 import 'name_validator.dart';
 
 void main(List<String> arguments) {
-  final String anEmptyName = "";
-  final String aVeryLongName = "kjkrljg jkrgj jkj gkjkjgk kl kjlkkljklj";
+  final anEmptyName = "";
+  final aVeryLongName = "kjkrljg jkrgj jkj gkjkjgk kl kjlkkljklj";
   final aValidName = "Ahmed";
-  final validator = NameValidator().validator;
-  final validationResult = validator.validate(anEmptyName);
-  final secondVR = validator.validate(aVeryLongName);
-  final thirdVR = validator.validate(aValidName);
+  final nameValidator = NameValidator();
+  final firstValidation = nameValidator.validate(anEmptyName);
+  final secondValidation = nameValidator.validate(aVeryLongName);
+  final thirdValidation = nameValidator.validate(aValidName);
 
-  print(validationResult);
-  print(secondVR);
-  print(thirdVR);
+  print(firstValidation);
+  print(secondValidation);
+  print(thirdValidation);
 }
